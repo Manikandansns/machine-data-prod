@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model MachineData {
+  id              String   @id @default(uuid())
+  temp    Float?
+  humidity        Float?
+  volume    Float?
+  percentage     Float?
+  voltage         Float?
+  current         Float?
+  power           Float?
+  energy          Float?
+  frequency       Float?
+  pf     Float?
+  plc_error_id   Int?
+  createdAt       DateTime @default(now())
+}
