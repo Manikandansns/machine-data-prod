@@ -1,4 +1,4 @@
-import { z, ZodSafeParseError } from "zod/v4";
+import { z, ZodSafeParseError } from "zod";
 
 const envSchema = z.object({
   // COMMON CONFIGURATION
