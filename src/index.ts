@@ -28,6 +28,11 @@ app.use(
 
 // Register Routes
 app.route("/api/v1", machineDataRoutes);
+app.get("/", (c) => {
+  return c.json({
+    message: "Welcome to the Machine Data Dashboard API"
+  });
+});
 
 // 404 Not Found Handler
 app.notFound((c) => c.json({ error: "Not Found" }, 404));
